@@ -4,6 +4,8 @@ A professional, interactive workflow builder application built with React and Ty
 
 ![Workflow Builder](https://img.shields.io/badge/React-18.2.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.2.2-blue) ![Vite](https://img.shields.io/badge/Vite-5.1.6-purple)
 
+<img width="1915" height="929" alt="Image" src="https://github.com/user-attachments/assets/5c459cd2-5703-4724-aad7-3869a02092b3" />
+
 ## ✨ Features
 
 ### Core Functionality
