@@ -38,7 +38,7 @@ export const Navbar: React.FC = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: '0 1.5rem',
+            padding: '0 2.5rem',
             position: 'sticky',
             top: 0,
             zIndex: 40,

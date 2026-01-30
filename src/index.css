@@ -416,7 +416,7 @@ body {
 
   /* Navbar adjustments */
   header {
-    padding: 0 1rem !important;
+    padding: 0 2rem !important;
   }
 
   header>div:first-child {
@@ -479,9 +479,15 @@ body {
     height: 20px !important;
   }
 
-  /* Hide undo/redo on very small screens */
-  header>div:last-child>div:first-child {
-    display: none !important;
+
+  /* Smaller undo/redo buttons on mobile */
+  header>div:last-child>div:first-child button {
+    padding: 0.25rem !important;
+  }
+
+  header>div:last-child>div:first-child svg {
+    width: 14px !important;
+    height: 14px !important;
   }
 
   /* Smaller buttons */
