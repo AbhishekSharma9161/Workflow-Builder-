@@ -172,13 +172,6 @@ This project is licensed under the MIT License.
 - Icons by [Lucide](https://lucide.dev/)
 - Built with [Vite](https://vitejs.dev/) and [React](https://react.dev/)
 
-## 📸 Screenshots
-
-### Desktop View
-![Desktop View](https://via.placeholder.com/800x400?text=Desktop+View)
-
-### Mobile View
-![Mobile View](https://via.placeholder.com/400x800?text=Mobile+View)
 
 ## 🐛 Known Issues
 

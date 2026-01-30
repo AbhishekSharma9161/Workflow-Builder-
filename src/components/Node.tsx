@@ -17,55 +17,51 @@ const DeleteConfirmationModal: React.FC<DeleteModalProps> = ({ isOpen, onConfirm
 
     return (
         <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            position: 'absolute',
+            top: 'calc(100% + 0.5rem)',
+            left: '50%',
+            transform: 'translateX(-50%)',
             zIndex: 1000,
             pointerEvents: 'auto'
         }}>
             <div style={{
                 backgroundColor: '#1f2937',
-                borderRadius: '12px',
-                padding: '2rem',
-                maxWidth: '400px',
-                width: '90%',
-                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3)',
+                borderRadius: '8px',
+                padding: '1.25rem',
+                width: '280px',
+                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.3)',
                 animation: 'slideIn 0.2s ease-out'
             }}>
                 <h3 style={{
                     color: 'white',
-                    fontSize: '1.125rem',
+                    fontSize: '0.9375rem',
                     fontWeight: 600,
-                    marginBottom: '0.5rem'
+                    marginBottom: '0.375rem'
                 }}>
                     Delete this node?
                 </h3>
                 <p style={{
                     color: '#9ca3af',
-                    fontSize: '0.875rem',
-                    marginBottom: '1.5rem'
+                    fontSize: '0.8125rem',
+                    marginBottom: '1rem',
+                    lineHeight: '1.4'
                 }}>
                     This action cannot be undone. The node will be removed from the workflow.
                 </p>
                 <div style={{
                     display: 'flex',
-                    gap: '0.75rem',
+                    gap: '0.5rem',
                     justifyContent: 'flex-end'
                 }}>
                     <button
                         onClick={onCancel}
                         style={{
-                            padding: '0.5rem 1.25rem',
+                            padding: '0.375rem 1rem',
                             backgroundColor: '#374151',
                             color: 'white',
                             border: 'none',
-                            borderRadius: '0.5rem',
-                            fontSize: '0.875rem',
+                            borderRadius: '0.375rem',
+                            fontSize: '0.8125rem',
                             fontWeight: 500,
                             cursor: 'pointer',
                             transition: 'background-color 0.2s'
@@ -78,12 +74,12 @@ const DeleteConfirmationModal: React.FC<DeleteModalProps> = ({ isOpen, onConfirm
                     <button
                         onClick={onConfirm}
                         style={{
-                            padding: '0.5rem 1.25rem',
+                            padding: '0.375rem 1rem',
                             backgroundColor: '#3b82f6',
                             color: 'white',
                             border: 'none',
-                            borderRadius: '0.5rem',
-                            fontSize: '0.875rem',
+                            borderRadius: '0.375rem',
+                            fontSize: '0.8125rem',
                             fontWeight: 500,
                             cursor: 'pointer',
                             transition: 'background-color 0.2s'
@@ -105,6 +101,7 @@ export const WorkflowNodeComponent: React.FC<NodeProps> = ({ nodeId }) => {
 
     const [showAddMenu, setShowAddMenu] = useState(false);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
+
 
     if (!node) return null;
 
@@ -143,7 +140,7 @@ export const WorkflowNodeComponent: React.FC<NodeProps> = ({ nodeId }) => {
     };
 
     return (
-        <div className="node-wrapper">
+        <div className="node-wrapper" style={{ position: 'relative' }}>
             <DeleteConfirmationModal
                 isOpen={showDeleteModal}
                 onConfirm={handleConfirmDelete}
